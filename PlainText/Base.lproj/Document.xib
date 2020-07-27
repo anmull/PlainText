@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="16097" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16097"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="Document">
+            <connections>
+                <outlet property="textView" destination="AO8-68-5ch" id="Te1-1h-f2k"/>
+                <outlet property="window" destination="5" id="18"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titleVisibility="hidden" id="5" userLabel="Window">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="295" y="262" width="600" height="600"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1177"/>
+            <value key="minSize" type="size" width="200" height="200"/>
+            <view key="contentView" id="6">
+                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView focusRingType="none" appearanceType="lightContent" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="Cmv-HN-XSZ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <clipView key="contentView" focusRingType="none" id="ahN-hw-bJE">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <textView focusRingType="none" importsGraphics="NO" richText="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" allowsCharacterPickerTouchBarItem="NO" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" textCompletion="NO" id="AO8-68-5ch">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <color key="textColor" red="0.69422435760000001" green="0.69803041219999995" blue="0.69803398849999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="backgroundColor" red="0.11764857920000001" green="0.11764507740000001" blue="0.11764576290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <size key="minSize" width="600" height="600"/>
+                                    <size key="maxSize" width="10000000" height="10000000"/>
+                                    <color key="insertionPointColor" red="0.69422435760000001" green="0.69803041219999995" blue="0.69803398849999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <connections>
+                                        <binding destination="-2" name="attributedString" keyPath="self.stringModel" id="qPe-H9-THh"/>
+                                    </connections>
+                                </textView>
+                            </subviews>
+                            <color key="backgroundColor" red="0.11764857920000001" green="0.11764507740000001" blue="0.11764576290000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="CQZ-4e-bVe">
+                            <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="nR6-Xx-I6j">
+                            <rect key="frame" x="582" y="0.0" width="16" height="598"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Cmv-HN-XSZ" firstAttribute="leading" secondItem="6" secondAttribute="leading" id="JuA-gY-xTl"/>
+                    <constraint firstAttribute="bottom" secondItem="Cmv-HN-XSZ" secondAttribute="bottom" id="P1s-Nm-ME6"/>
+                    <constraint firstItem="Cmv-HN-XSZ" firstAttribute="top" secondItem="6" secondAttribute="top" id="vnl-7x-Khx"/>
+                    <constraint firstAttribute="trailing" secondItem="Cmv-HN-XSZ" secondAttribute="trailing" id="zrP-9m-HiW"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="17"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="147"/>
+        </window>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <userDefaultsController representsSharedInstance="YES" id="T2B-US-Gnt"/>
+    </objects>
+</document>
